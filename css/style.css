@@ -224,6 +224,11 @@ main > section {
 #feater-section-title {
   border-left: 5px solid #ff900e;
   padding-left: 10px;
+  margin-bottom: 24px;
+}
+.features > div> p{
+    line-height: 26px;
+    margin-bottom: 30px;
 }
 .feature-card {
   padding: 30px;
@@ -234,14 +239,41 @@ main > section {
 .feature-card .feature-title {
   font-weight: 600;
   font-size: 1.25rem;
-  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.feature-card > p{
+    line-height: 26px;
+}
+.feature-architect img{
+    width: 100%;
+}
+#experience-badge{
+    padding: 45px 42px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
+#experience-year{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+footer{
+    text-align: center;
+    padding: 22px 0;
+    margin-top: 130px;
+    
 }
 /* responsive media query */
 
 @media screen and (max-width: 576px) {
   .navbar,
   .nav-links,
-  .teams {
+  .teams,
+  .features {
     flex-direction: column;
   }
 
@@ -262,11 +294,19 @@ main > section {
     justify-items: center;
     gap: 50px;
   }
+
+  #experience-badge{
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  footer{
+    font-size: 14px;
+  }
 }
 
 /* medium size device */
 @media screen and (min-width: 576px) and (max-width: 992px) {
-  .teams {
+  .teams, .features {
     flex-direction: column;
   }
   .our-features {
@@ -277,5 +317,11 @@ main > section {
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
     justify-items: center;
+  }
+
+  
+  #experience-badge{
+    margin-top: 20px;
+    margin-left: 20px;
   }
 }
