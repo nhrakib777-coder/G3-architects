@@ -156,43 +156,66 @@ main > section {
   margin-bottom: 32px;
 }
 
-
 #quick-list {
   font-weight: 500;
 }
 
 /* some facts start */
-.facts-container{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* gap: ; */
+.facts-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* gap: ; */
 }
-.fact-card{
-    border: 1px solid #ff900e;
-    width: 240px;
-    height: 240px;
-    border-radius: 8px;
+
+.fact-content {
+  width: 540px;
+  margin-bottom: 50px;
+}
+
+.fact-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-top: 24px;
+}
+.fact-card {
+  border: 1px solid #ff900e;
+  width: 240px;
+  height: 240px;
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.fact-number {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin: 5px 0 10px 0;
+  color: #424242;
+}
+
+.fact-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #727272;
+}
+/* sponsors related style */
+.sponsors-info{
+    max-width: 540px;
+    margin: 50px auto;
     text-align: center;
-    align-items: center;
-    justify-content: center;
 }
 
-.fact-number{
-    font-size: 2.8rem;
-    font-weight: 600;
-    margin: 5px 0 10px 0;
-    color: #424242;
+.sponsors-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
 }
 
-.fact-name{
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-top: 10px;
-    color: #727272;
-}
-
-.fact-description{
-    width: 540px;
+.sponsors-companies img{
+    filter: grayscale(100%);
 }
 /* responsive media query */
 
@@ -203,20 +226,38 @@ main > section {
     flex-direction: column;
   }
 
-  .team-img-container{
-    grid-template-columns: repeat(1, 1fr);
+  .team-img-container,
+  .facts-container,
+  .sponsors-companies {
+    grid-template-columns: 1fr;
   }
-  .our-features{
-    margin: 20px ;
+  .our-features {
+    margin: 20px;
   }
+
+  .facts-container
+   {
+    justify-items: center;
+    gap: 24px;
+  }
+  .sponsors-companies{
+    justify-items: center;
+    gap: 50px;
+  }
+
 }
 
 /* medium size device */
-@media screen and (min-width: 576px) and (max-width:992px){
-    .teams{
-        flex-direction: column;
-    }
-    .our-features{
-        margin: 50px auto;
-    }
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .teams {
+    flex-direction: column;
+  }
+  .our-features {
+    margin: 50px auto;
+  }
+  .sponsors-companies, .facts-container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    justify-items: center;
+  }
 }
